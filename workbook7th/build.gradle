@@ -51,7 +51,7 @@ tasks.named('test') {
 }
 
 // Querydsl 설정부
-def generated = 'srcDirs/main/generated'
+def generated = 'srcDirs/generated'
 
 querydsl {
 	jpa = true
