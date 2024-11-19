@@ -2,6 +2,7 @@ package umc.workbook7th.service.TempService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import umc.workbook7th.apiPayload.code.status.ErrorStatus;
 import umc.workbook7th.apiPayload.exception.handler.TempHandler;
 
 @Service

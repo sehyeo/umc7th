@@ -10,7 +10,7 @@ import umc.workbook7th.converter.TempConverter;
 import umc.workbook7th.service.TempService.TempQueryService;
 import umc.workbook7th.web.dto.TempResponse;
 
-import static com.sun.tools.classfile.Attribute.Code;
+
 
 @RestController
 @RequestMapping("/temp")
@@ -20,9 +20,9 @@ public class TempRestController {
     private final TempQueryService tempQueryService;
 
     @GetMapping("/test")
-    public ResponseDto<TempResponse.TempTestDTO> testAPI(){
+    public ApiResponse<TempResponse.TempTestDTO> testAPI(){
 
-        return ResponseDto.onSuccess(TempConverter.toTempTestDTO(), Code.OK);
+        return ApiResponse.onSuccess(TempConverter.toTempTestDTO());
     }
 
     @GetMapping("/exception")
