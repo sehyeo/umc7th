@@ -42,7 +42,7 @@ dependencies {
 sourceSets {
 	main {
 		java {
-			srcDirs = ['src/main/java', 'src/main/resources']
+			srcDirs = ['src/main/java', 'src/main/resources', 'src/main/generated']
 		}
 	}
 }
@@ -52,7 +52,7 @@ tasks.named('test') {
 }
 
 // Querydsl 설정부
-def generated = 'srcDirs/generated'
+def generated = 'src/main/generated'
 
 querydsl {
 	jpa = true
