@@ -1,4 +1,7 @@
 package umc.workbook7th.repository.MemberRepository;
 
-public interface MemberRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import umc.workbook7th.domain.Member;
+
+public interface MemberRepository extends JpaRepository<Member, Long> {
 }

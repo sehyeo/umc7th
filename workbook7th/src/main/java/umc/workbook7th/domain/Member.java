@@ -3,6 +3,8 @@ package umc.workbook7th.domain;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import umc.workbook7th.domain.common.BaseEntity;
 import umc.workbook7th.domain.enums.Gender;
 import umc.workbook7th.domain.enums.MemberStatus;
@@ -17,6 +19,8 @@ import java.util.List;
 
 @Entity
 @Getter
+@DynamicUpdate
+@DynamicInsert
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -48,7 +52,7 @@ public class Member extends BaseEntity {
 
     private LocalDate inactiveDate;
 
-    @Column(nullable = false, length = 50)
+//    @Column(nullable = false, length = 50)
     private String email;
 
     @ColumnDefault("0")
