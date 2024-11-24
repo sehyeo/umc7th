@@ -7,5 +7,5 @@ import java.util.List;
 
 
 public interface ReviewRepositoryCustom {
-    List<Review> dynamicQueryWithBooleanBuilder(String name, Float score);
+    List<Review> dynamicQueryWithBooleanBuilder(Long id, Float score);
 }

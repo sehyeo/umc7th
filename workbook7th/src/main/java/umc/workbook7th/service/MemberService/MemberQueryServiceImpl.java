@@ -1,4 +1,23 @@
 package umc.workbook7th.service.MemberService;
 
-public class MemberQueryServiceImpl {
+// import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import umc.workbook7th.domain.Member;
+import umc.workbook7th.repository.MemberRepository.MemberRepository;
+
+import java.util.Optional;
+
+@Service
+@RequiredArgsConstructor
+@Transactional(readOnly = true)
+public class MemberQueryServiceImpl implements MemberQueryService{
+
+    private final MemberRepository memberRepository;
+
+    @Override
+    public Optional<Member> findMember(Long id) {
+        return memberRepository.findById(id);
+    }
 }

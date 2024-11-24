@@ -1,4 +1,4 @@
-/* package umc.workbook7th.repository.ReviewRepository;
+package umc.workbook7th.repository.ReviewRepository;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -16,7 +16,7 @@ public class ReviewRepositoryImpl implements ReviewRepositoryCustom {
     private final QReview review = QReview.review;
 
     @Override
-    public List<Review> dynamicQueryWithBooleanBuilder(String id, Float score) {
+    public List<Review> dynamicQueryWithBooleanBuilder(Long id, Float score) {
         BooleanBuilder predicate = new BooleanBuilder();
 
         if (id != null) {
@@ -32,4 +32,4 @@ public class ReviewRepositoryImpl implements ReviewRepositoryCustom {
                 .where(predicate)
                 .fetch();
     }
-} */
+}
