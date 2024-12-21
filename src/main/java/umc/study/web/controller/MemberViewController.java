@@ -1,6 +1,7 @@
 package umc.study.web.controller;
 
-import io.swagger.models.Model;
+import lombok.RequiredArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +11,7 @@ import umc.study.service.MemberService.MemberCommandService;
 import umc.study.web.dto.MemberRequestDTO;
 
 @Controller
+@RequiredArgsConstructor
 public class MemberViewController {
 
     private final MemberCommandService memberCommandService;
