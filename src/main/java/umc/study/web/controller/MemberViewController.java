@@ -16,11 +16,6 @@ public class MemberViewController {
 
     private final MemberCommandService memberCommandService;
 
-    @GetMapping("/login")
-    public String loginPage() {
-        return "login";
-    }
-
     @PostMapping("/members/signup")
     public String joinMember(@ModelAttribute("memberJoinDto") MemberRequestDTO.JoinDto request, // 협업시에는 기존 RequestBody 어노테이션을 붙이면 됨.
                              BindingResult bindingResult,
@@ -38,6 +33,17 @@ public class MemberViewController {
             model.addAttribute("error", e.getMessage());
             return "signup";
         }
+    }
+
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
+
+    @GetMapping("/signup")
+    public String signupPage(Model model) {
+        model.addAttribute("memberJoinDto", new MemberRequestDTO.JoinDto());
+        return "signup";
     }
 
     @GetMapping("/home")

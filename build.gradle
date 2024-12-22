@@ -36,7 +36,7 @@ dependencies {
 	implementation 'com.fasterxml.jackson.core:jackson-core:2.15.2'
 	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.2'
 
-	implementation 'org.hibernate:hibernate-core:5.6.9.Final'
+	//implementation 'org.hibernate:hibernate-core:5.6.9.Final'
 
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
 	implementation 'org.springdoc:springdoc-openapi-data-rest:1.6.9'
