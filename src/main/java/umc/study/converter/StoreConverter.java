@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 public class StoreConverter {
 
+
     public static Review toReview(StoreRequestDTO.ReviewDTO request) {
         return Review.builder()
                 .title(request.getTitle())
@@ -85,9 +86,10 @@ public class StoreConverter {
 
     public static MissionResponseDTO.MissionPreViewDTO missionPreViewDTO(Mission mission){
         return MissionResponseDTO.MissionPreViewDTO.builder()
-                .ownerNickname(mission.getStore().getName())
+                .missionId(mission.getId())
+                .missionSpec(mission.getMissionSpec())
                 .reward(mission.getReward())
-                .body(mission.getMissionSpec())
+                .createdAt(mission.getCreatedAt())
                 .build();
     }
 
